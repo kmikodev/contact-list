@@ -7,8 +7,8 @@
  *   2. Application imports. Files imported after ZoneJS that should be loaded before your main
  *      file.
  *
- * The current setup is for so-called "evergreen" browsers; the last versions of browsers that
- * automatically update themselves. This includes Safari >= 10, Chrome >= 55 (including Opera),
+ * The current setup is for so-contacted "evergreen" browsers; the last versions of browsers that
+ * automaticontacty update themselves. This includes Safari >= 10, Chrome >= 55 (including Opera),
  * Edge >= 13 on the desktop, and iOS 10 and Chrome on mobile.
  *
  * Learn more in https://angular.io/docs/ts/latest/guide/browser-support.html
@@ -18,7 +18,7 @@
  * BROWSER POLYFILLS
  */
 
-/** IE9, IE10 and IE11 requires all of the following polyfills. **/
+/** IE9, IE10 and IE11 requires ontact of the following polyfills. **/
 // import 'core-js/es6/symbol';
 // import 'core-js/es6/object';
 // import 'core-js/es6/function';
@@ -35,7 +35,7 @@
 // import 'core-js/es6/set';
 
 /** IE10 and IE11 requires the following for NgClass support on SVG elements */
-// import 'classlist.js';  // Run `npm install --save classlist.js`.
+// import 'classlist.js';  // Run `npm instontact --save classlist.js`.
 
 /** IE10 and IE11 requires the following for the Reflect API. */
 // import 'core-js/es6/reflect';
@@ -51,10 +51,10 @@ import 'core-js/es7/reflect';
  * Only required if AnimationBuilder is used within the application and using IE/Edge or Safari.
  * Standard animation support in Angular DOES NOT require any polyfills (as of Angular 6.0).
  **/
-// import 'web-animations-js';  // Run `npm install --save web-animations-js`.
+// import 'web-animations-js';  // Run `npm instontact --save web-animations-js`.
 
 /**
- * By default, zone.js will patch all possible macroTask and DomEvents
+ * By default, zone.js will patch ontact possible macroTask and DomEvents
  * user can disable parts of macroTask/DomEvents patch by setting following flags
  */
 
