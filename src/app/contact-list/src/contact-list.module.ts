@@ -24,7 +24,7 @@ import { ContactListComponent } from './contact-list/contact-list.component';
     ContactListComponent
   ],
   providers: [
-    { provide: 'PLUGIN_ENTRY_POINT', useValue: ContactListComponent }
+    { provide: 'COMPONENT_ENTRY_POINT', useValue: ContactListComponent }
   ]
 })
 export class ContactListModule { }

@@ -87,7 +87,7 @@ ContactListModule.decorators = [
                     ContactListComponent
                 ],
                 providers: [
-                    { provide: 'PLUGIN_ENTRY_POINT', useValue: ɵ0 }
+                    { provide: 'COMPONENT_ENTRY_POINT', useValue: ɵ0 }
                 ]
             },] },
 ];
