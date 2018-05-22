@@ -18,23 +18,38 @@ class ContactListComponent {
         if (!this.contacts) {
             this.contacts = [
                 {
-                    name: 'Nancy',
-                    phone: '+34 606 00 00 01',
-                    email: 'nancy@gmail.com',
-                    image: 'https://angular.io/generated/images/bios/julie-ralph.jpg'
+                    user: "morty137",
+                    name: "Morty",
+                    lastname: "Smith",
+                    specie: "humano",
+                    sex: "masculino",
+                    status: "vivo",
+                    pic: "Morty_Smith.png",
+                    age: 14,
+                    job: "Estudiante"
                 },
                 {
-                    name: 'Mary',
-                    phone: '+1 54 322 23',
-                    email: 'mary@gmail.com',
-                    image: 'https://angular.io/generated/images/bios/juleskremer.jpg'
+                    "user": "beth",
+                    "name": "Beth",
+                    "lastname": "Smith",
+                    "specie": "humano",
+                    "sex": "femenino",
+                    "status": "vivo",
+                    "pic": "Beth_Smith.png",
+                    "age": 34,
+                    "job": "Cirujana de caballos"
                 },
                 {
-                    name: 'Bobby',
-                    phone: '+1 123 123 123',
-                    email: 'bobby@gmail.com',
-                    image: 'https://angular.io/generated/images/bios/jelbourn.jpg'
-                }
+                    "user": "sumer",
+                    "name": "Sumer",
+                    "lastname": "Smith",
+                    "specie": "humano",
+                    "sex": "femenino",
+                    "status": "vivo",
+                    "pic": "Summer.png",
+                    "age": 17,
+                    "job": "Estudiante"
+                },
             ];
         }
     }
@@ -45,11 +60,16 @@ ContactListComponent.decorators = [
                 template: `<mat-list>
   <h3 mat-subheader>Contact list</h3>
   <mat-list-item *ngFor="let contact of contacts; last as last">
-    <img mat-list-avatar [src]="contact.image" alt="Image of {{contact.from}}">
-    <h4 mat-line>{{contact.name}}</h4>
+    <img mat-list-avatar [src]="'assets/'+contact.pic" alt="Image of {{contact.name}}">
+    <h4 mat-line>{{contact.name + ' ' + contact.lastname}}</h4>
     <p mat-line>
-      <span>{{contact.phone}} -- </span>
-      <span class="demo-secondary-text">{{contact.email}}</span>
+      <span>Especie: {{contact.specie}} -- </span>
+      <span class="demo-secondary-text">Trabajo: {{contact.job}}</span>
+    </p>
+    <p mat-line>
+      <span>Género: {{contact.sex}} -- </span>
+      <span class="demo-secondary-text">Edad: {{contact.age}}  -- </span>
+      <span class="demo-secondary-text">Está {{contact.status}}</span>
     </p>
     <mat-divider inset *ngIf="!last"></mat-divider>
   </mat-list-item>

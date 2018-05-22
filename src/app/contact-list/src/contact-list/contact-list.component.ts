@@ -6,7 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact-list.component.scss']
 })
 export class ContactListComponent implements OnInit {
-  public contacts: { name: String, phone: String, email: String, image: String }[];
+  public contacts: {
+    user: string,
+    name: string,
+    lastname: string,
+    sex: string,
+    status: string,
+    specie: string,
+    age: number,
+    pic: string,
+    job: string
+  }[];
 
   constructor() {
   }
@@ -15,23 +25,38 @@ export class ContactListComponent implements OnInit {
     if (!this.contacts) {
       this.contacts = [
         {
-          name: 'Nancy',
-          phone: '+34 606 00 00 01',
-          email: 'nancy@gmail.com',
-          image: 'https://angular.io/generated/images/bios/julie-ralph.jpg'
+          user: "morty137",
+          name: "Morty",
+          lastname: "Smith",
+          specie: "humano",
+          sex: "masculino",
+          status: "vivo",
+          pic: "Morty_Smith.png",
+          age: 14,
+          job: "Estudiante"
         },
         {
-          name: 'Mary',
-          phone: '+1 54 322 23',
-          email: 'mary@gmail.com',
-          image: 'https://angular.io/generated/images/bios/juleskremer.jpg'
+          "user": "beth",
+          "name": "Beth",
+          "lastname": "Smith",
+          "specie": "humano",
+          "sex": "femenino",
+          "status": "vivo",
+          "pic": "Beth_Smith.png",
+          "age": 34,
+          "job": "Cirujana de caballos"
         },
         {
-          name: 'Bobby',
-          phone: '+1 123 123 123',
-          email: 'bobby@gmail.com',
-          image: 'https://angular.io/generated/images/bios/jelbourn.jpg'
-        }
+          "user": "sumer",
+          "name": "Sumer",
+          "lastname": "Smith",
+          "specie": "humano",
+          "sex": "femenino",
+          "status": "vivo",
+          "pic": "Summer.png",
+          "age": 17,
+          "job": "Estudiante"
+        },
       ];
     }
   }

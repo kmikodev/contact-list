@@ -1,11 +1,16 @@
 <mat-list>
   <h3 mat-subheader>Contact list</h3>
   <mat-list-item *ngFor="let contact of contacts; last as last">
-    <img mat-list-avatar [src]="contact.image" alt="Image of {{contact.from}}">
-    <h4 mat-line>{{contact.name}}</h4>
+    <img mat-list-avatar [src]="'assets/'+contact.pic" alt="Image of {{contact.name}}">
+    <h4 mat-line>{{contact.name + ' ' + contact.lastname}}</h4>
     <p mat-line>
-      <span>{{contact.phone}} -- </span>
-      <span class="demo-secondary-text">{{contact.email}}</span>
+      <span>Especie: {{contact.specie}} -- </span>
+      <span class="demo-secondary-text">Trabajo: {{contact.job}}</span>
+    </p>
+    <p mat-line>
+      <span>Género: {{contact.sex}} -- </span>
+      <span class="demo-secondary-text">Edad: {{contact.age}}  -- </span>
+      <span class="demo-secondary-text">Está {{contact.status}}</span>
     </p>
     <mat-divider inset *ngIf="!last"></mat-divider>
   </mat-list-item>

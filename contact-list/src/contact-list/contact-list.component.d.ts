@@ -1,10 +1,15 @@
 import { OnInit } from '@angular/core';
 export declare class ContactListComponent implements OnInit {
     contacts: {
-        name: String;
-        phone: String;
-        email: String;
-        image: String;
+        user: string;
+        name: string;
+        lastname: string;
+        sex: string;
+        status: string;
+        specie: string;
+        age: number;
+        pic: string;
+        job: string;
     }[];
     constructor();
     ngOnInit(): void;

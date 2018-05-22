@@ -11,23 +11,38 @@ var ContactListComponent = /** @class */ (function () {
         if (!this.contacts) {
             this.contacts = [
                 {
-                    name: 'Nancy',
-                    phone: '+34 606 00 00 01',
-                    email: 'nancy@gmail.com',
-                    image: 'https://angular.io/generated/images/bios/julie-ralph.jpg'
+                    user: "morty137",
+                    name: "Morty",
+                    lastname: "Smith",
+                    specie: "humano",
+                    sex: "masculino",
+                    status: "vivo",
+                    pic: "Morty_Smith.png",
+                    age: 14,
+                    job: "Estudiante"
                 },
                 {
-                    name: 'Mary',
-                    phone: '+1 54 322 23',
-                    email: 'mary@gmail.com',
-                    image: 'https://angular.io/generated/images/bios/juleskremer.jpg'
+                    "user": "beth",
+                    "name": "Beth",
+                    "lastname": "Smith",
+                    "specie": "humano",
+                    "sex": "femenino",
+                    "status": "vivo",
+                    "pic": "Beth_Smith.png",
+                    "age": 34,
+                    "job": "Cirujana de caballos"
                 },
                 {
-                    name: 'Bobby',
-                    phone: '+1 123 123 123',
-                    email: 'bobby@gmail.com',
-                    image: 'https://angular.io/generated/images/bios/jelbourn.jpg'
-                }
+                    "user": "sumer",
+                    "name": "Sumer",
+                    "lastname": "Smith",
+                    "specie": "humano",
+                    "sex": "femenino",
+                    "status": "vivo",
+                    "pic": "Summer.png",
+                    "age": 17,
+                    "job": "Estudiante"
+                },
             ];
         }
     };
@@ -36,7 +51,7 @@ var ContactListComponent = /** @class */ (function () {
 ContactListComponent.decorators = [
     { type: core.Component, args: [{
                 selector: 'app-contact-list',
-                template: "<mat-list>\n  <h3 mat-subheader>Contact list</h3>\n  <mat-list-item *ngFor=\"let contact of contacts; last as last\">\n    <img mat-list-avatar [src]=\"contact.image\" alt=\"Image of {{contact.from}}\">\n    <h4 mat-line>{{contact.name}}</h4>\n    <p mat-line>\n      <span>{{contact.phone}} -- </span>\n      <span class=\"demo-secondary-text\">{{contact.email}}</span>\n    </p>\n    <mat-divider inset *ngIf=\"!last\"></mat-divider>\n  </mat-list-item>\n</mat-list>",
+                template: "<mat-list>\n  <h3 mat-subheader>Contact list</h3>\n  <mat-list-item *ngFor=\"let contact of contacts; last as last\">\n    <img mat-list-avatar [src]=\"'assets/'+contact.pic\" alt=\"Image of {{contact.name}}\">\n    <h4 mat-line>{{contact.name + ' ' + contact.lastname}}</h4>\n    <p mat-line>\n      <span>Especie: {{contact.specie}} -- </span>\n      <span class=\"demo-secondary-text\">Trabajo: {{contact.job}}</span>\n    </p>\n    <p mat-line>\n      <span>G\u00E9nero: {{contact.sex}} -- </span>\n      <span class=\"demo-secondary-text\">Edad: {{contact.age}}  -- </span>\n      <span class=\"demo-secondary-text\">Est\u00E1 {{contact.status}}</span>\n    </p>\n    <mat-divider inset *ngIf=\"!last\"></mat-divider>\n  </mat-list-item>\n</mat-list>",
                 styles: [""]
             },] },
 ];
